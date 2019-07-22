@@ -22,7 +22,7 @@ const measure = require("../build/measure-async-babel.js");
 (async () => {
   try {
     const time = await measure(fibonacci, 42);
-    console.log(`Time(fibonacci-async-es2017-babel): ${time} ms.`);
+    console.log(JSON.stringify({"benchmark": "fibonacci-async-es2017-babel", time}));
   } catch (err) {
     console.error(err);
   }

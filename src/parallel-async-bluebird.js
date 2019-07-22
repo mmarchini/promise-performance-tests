@@ -22,7 +22,7 @@ const measure = require("../lib/measure-async.js");
 (async () => {
   try {
     const time = await measure(parallel, "b", "c");
-    console.log(`Time(parallel-async-bluebird): ${time} ms.`);
+    console.log(JSON.stringify({"benchmark": "parallel-async-bluebird", time}));
   } catch (err) {
     console.error(err);
   }

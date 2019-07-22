@@ -22,7 +22,7 @@ const measure = require("../build/measure-async-babel.js");
 (async () => {
   try {
     const time = await measure(parallel, "b", "c");
-    console.log(`Time(parallel-async-es2017-babel): ${time} ms.`);
+    console.log(JSON.stringify({"benchmark": "parallel-async-es2017-babel", time}));
   } catch (err) {
     console.error(err);
   }

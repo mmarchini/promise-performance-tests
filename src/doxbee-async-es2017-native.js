@@ -20,7 +20,7 @@ const measure = require("../lib/measure-async.js");
 (async () => {
   try {
     const time = await measure(doxbee, "b", "c");
-    console.log(`Time(doxbee-async-es2017-native): ${time} ms.`);
+    console.log(JSON.stringify({"benchmark": "doxbee-async-es2017-native", time}));
   } catch (err) {
     console.error(err);
   }

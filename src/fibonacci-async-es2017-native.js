@@ -20,7 +20,7 @@ const measure = require("../lib/measure-async.js");
 (async () => {
   try {
     const time = await measure(fibonacci, 42);
-    console.log(`Time(fibonacci-async-es2017-native): ${time} ms.`);
+    console.log(JSON.stringify({"benchmark": "fibonacci-async-es2017-native", time}));
   } catch (err) {
     console.error(err);
   }

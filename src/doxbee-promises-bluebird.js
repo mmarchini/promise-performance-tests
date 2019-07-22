@@ -20,5 +20,5 @@ const doxbee = require("../lib/doxbee-promises.js");
 const measure = require("../lib/measure-promises.js");
 
 measure(doxbee, "b", "c")
-  .then(time => console.log(`Time(doxbee-promises-bluebird): ${time} ms.`))
+  .then(time => console.log(JSON.stringify({"benchmark": "doxbee-promises-bluebird", time})))
   .catch(reason => console.error(reason));

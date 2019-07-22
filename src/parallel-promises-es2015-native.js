@@ -19,6 +19,6 @@ const measure = require("../lib/measure-promises.js");
 
 measure(parallel, "b", "c")
   .then(time => {
-    console.log(`Time(parallel-promises-es2015-native): ${time} ms.`);
+    console.log(JSON.stringify({"benchmark": "parallel-promises-es2015-native", time}));
   })
   .catch(reason => console.error(reason));
